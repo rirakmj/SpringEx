@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ <mapper namespace="com.myboard.mapper.CommentMapper">
+ <insert id="insert">
+  insert into commentboard(userid,content, regdate,bnum)
+  values(#{userid}, #{content},now(),#{bnum})
+ </insert>
+ 
+ <select id="getList" resultType="com.myboard.dto.CommentDTO">
+ select * from commentboard where bnum=#{bnum}
+ </select>
+
+ 
+ </mapper>
