@@ -23,7 +23,7 @@
 		.done(function(resp){
 			if(resp=="no"){
 				 alert("회원이 아닙니다. 회원가입하세요");
-				  location.href="join";
+				  location.href="/app007/member/join";
 			}else if(resp=="success"){
 				 alert("로그인 성공")
 				  location.href="/app007/"
