@@ -28,6 +28,9 @@ public class CustonLoginSuccess  implements AuthenticationSuccessHandler{
 				    authority  ->roleNames.add(authority.getAuthority()));
 		System.out.println("roleNames : " + roleNames);
 		
+		response.sendRedirect("/app008/board/list");
+		
+		
 	} 
 
 }

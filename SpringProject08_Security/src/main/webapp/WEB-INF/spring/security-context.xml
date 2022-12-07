@@ -19,9 +19,11 @@
 			access="permitAll" />
 		<security:intercept-url pattern="/manager"
 			access="hasRole('ROLE_MANAGER')" />
-		<security:form-login login-page="/customLogin" 
-			authentication-success-handler-ref="customLoginSuccess" />
+<!-- 		<security:form-login login-page="/customLogin" 
+			authentication-success-handler-ref="customLoginSuccess" /> -->
 			
+		<security:form-login login-page="/customLogin"  />
+	
   		<security:csrf disabled="true" />
   		
   	<!-- 	<security:logout  invalidate-session="true"/> -->
